@@ -1,11 +1,12 @@
 // complete the given function
 
 function palindrome(str) {
-  let ans = "";
-  for (let i = str.length - 1; i >= 0; i--) {
-    ans += str[i];
+  let palindromeStr = "";
+  for (let index = 0; index < str.length; index++) {
+    let currChar = str.at(index);
+    palindromeStr = currChar + palindromeStr;
   }
-  if (str === ans) {
+  if (palindromeStr === str) {
     return true;
   }
   return false;
