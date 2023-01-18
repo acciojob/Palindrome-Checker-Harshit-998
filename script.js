@@ -1,14 +1,11 @@
 // complete the given function
 
 function palindrome(str) {
-  let palindromeStr = "";
-  for (let index = 0; index < str.length; index++) {
-    let currChar = str.at(index);
-    palindromeStr = currChar + palindromeStr;
-  }
-  if (palindromeStr === str) {
-    return true;
-  }
-  return false;
+  //convert the string in lower cases
+  str = str.toLowerCase();
+  //reverse the string
+  let reversedStr = str.split("").reverse().join("");
+  //check if the str is palindrome or not
+  return str === reversedStr;
 }
 module.exports = palindrome;
